@@ -1,12 +1,12 @@
-
 {
   "cars": [
     {
       "make": "Nissan",
       "model": "Rogue",
-      "year": "2006",
+      "year": "2016",
       "price": "8999",
       "color": "red",
+      "image": "./images/nissanRogue.png",
       "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
     },
     {
@@ -15,6 +15,7 @@
       "year": "2006",
       "price": "4000",
       "color": "grey",
+      "image": "./images/toyotaCamry.png",
       "description": "This is an 2006 Toyota Camry with only 135000 miles on it, power everything."
     },
     {
@@ -23,6 +24,7 @@
       "year": "2008",
       "price": "8000",
       "color": "white",
+      "image": "./images/toyotaRava4.png",
       "description": "This is an 2008 Toyota RAVA 4 with only 80000 miles on it. sun roof, power everything."
     },
     {
@@ -31,6 +33,7 @@
       "year": "2012",
       "price": "7000",
       "color": "black",
+      "image": "./images/hondaCivic.png",
       "description": "This is an 2012 Honda RAVA 4 with only 45000 miles on it. low milage."
     }
   ]

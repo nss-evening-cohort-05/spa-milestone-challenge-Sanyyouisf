@@ -5,3 +5,27 @@
 	border: 2px solid green;
 	padding: 20px;
 }
+
+.box {
+	border: 2px solid black;
+	margin: 25px;
+	padding: 25px;
+}
+
+.carImage {
+	width: 100px;
+	min-height: 100px;
+	
+}
+
+/*.container-fluid {
+	background: #add8e6;
+	color: blue;
+	margin: 25px;
+	border: 2px solid green;
+	padding: 20px;
+}*/
+
+
+
+
