@@ -1,7 +1,7 @@
 # spa-milestone-challenge
 
 ## Project Description
-![Project Specifications](https://github.com/nss-evening-cohort-05/spa-milestone-challenge-Sanyyouisf)
+[Project Specifications](https://github.com/nss-evening-cohort-05/spa-milestone-challenge-Sanyyouisf/blob/master/instructions.md)
 
 ##Instructions
 
