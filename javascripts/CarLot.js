@@ -1,6 +1,6 @@
 // main IIFE function
 //variables
-var carContainer = document.getElementById("container")
+// var carContainer = document.getElementsByClassName("container");
 
 var CarLot = (function () {
 //The first IIFE should add a public function that loads the inventory.

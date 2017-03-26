@@ -35,6 +35,43 @@
       "color": "black",
       "image": "./images/hondaCivic.png",
       "description": "This is an 2012 Honda RAVA 4 with only 45000 miles on it. low milage."
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "1000",
+      "color": "red",
+      "image": "./images/nissanRogue.png",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 3000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Ford",
+      "model": "Traus",
+      "year": "2008",
+      "price": "5600",
+      "color": "red",
+      "image": "./images/fordTraus.png",
+      "description": "This is an immaculate 2008 Ford Traus with only 30 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Toyota",
+      "model": "Corolla",
+      "year": "2008",
+      "price": "3900",
+      "color": "green",
+      "image": "./images/toyotaCorolla.png",
+      "description": "This is an immaculate 2008 Toyota Corolla with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Mitsubishi",
+      "model": "Lancer",
+      "year": "2008",
+      "price": "7999",
+      "color": "red",
+      "image": "./images/mitsubishiLancer.png",
+      "description": "This is an immaculate 2008 Nissan Lancer with only 25000 miles on it. Leather seats, power everything."
     }
+
   ]
 }
