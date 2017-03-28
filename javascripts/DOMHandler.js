@@ -1,4 +1,12 @@
-CarLot.loading();
+CarLot.loadInventory();
+CarLot.resetBoarderBackground();
+
+// document.body.addEventListener("click",function(event){
+// 	CarLot.addBoarderBackground();
+// 	console.log("CarLot.addBoarderBackground");
+// });
+
+// CarLot.activateEvents();
 
 // function makeDom(data){
 //     // var currentCar="";

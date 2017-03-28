@@ -33,6 +33,8 @@ var CarLot = (function(inventory) {
 	currentCar +=`</div>`		
 	carContainer.innerHTML = currentCar;
 	};
+
+
 	return inventory;
 })(CarLot || {});
 

@@ -1,14 +1,13 @@
 // main IIFE function
 //variables
 // var carContainer = document.getElementsByClassName("container");
-
 var CarLot = (function () {
 //The first IIFE should add a public function that loads the inventory.
 //json file and stores the inventory in a private variable.
 // It should also expose a public getter to read the array of cars (e.g. getInventory).
   	return {
 
-  		loading : function(){
+  		loadInventory : function(){
 	  		var inventory = [];
 	  		var inventoryLoader = new XMLHttpRequest();
 		  		inventoryLoader.addEventListener ("load",CarLot.executeThisCodeAfterFileLoaded);
