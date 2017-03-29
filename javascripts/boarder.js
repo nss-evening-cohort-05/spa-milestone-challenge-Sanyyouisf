@@ -4,45 +4,63 @@
 //   1. A car DOM element that was clicked on.
 //  1. A color name of your choice
 
+var input = document.getElementById("input");
+var selectChildren = document.body.children;
 
-var CarLot = (function (inventory){
-	
-	inventory.resetBoarderBackground = function(data){
+var CarLot = (function(inventory){
+
+	//function to increase thickness and change background
+	inventory.resetBoarderBackground = function(){
 		if (document.body.classList.contains("box")){
-			console.log("the class is box");
 			var selectChildren = document.body.children;
 			//loop through all the children of the parent node
 			for (var i= 0; i<selectChildren.length; i++) {
 				//if any one has the bodred class it delete it 
-				if (selectChildren[i].classList.contains("increaseThickness") ){
-					selectChildren[i].classList.remove("increaseThickness");
-					console.log("the border removed");
+				if (selectChildren[i].classList.contains("increaseThickness") 
+				|| selectChildren[i].classList.contains("changeBackground")) {
+						selectChildren[i].classList.remove("increaseThickness");
+						selectChildren[i].classList.remove("changeBackground");
 				}
 			}
 		}
-	},
+	};
 
-	document.body.addEventListener("click",function(event){
-		console.log("event",event);
-		var selectChildren = event.target.parentNode.children;
-		console.log("selectChildren",selectChildren);
-		// if (selectChildren.classList.contains("box")){
-			console.log("the class is box");
-		for (var i= 0; i<selectChildren.length; i++) {
-			if (selectChildren[i].classList.contains("box")){
-				//if any one has the bodred class it delete it 
-				// console.log("classList before", selectChildren[i].classList);
-				if (selectChildren[i].classList.contains("increaseThickness")){
-					console.log("if statement");
-					selectChildren[i].classList.remove("increaseThickness");
-					console.log("the border removerd");
-				}
-				else{
-				event.target.classList.add("increaseThickness");
-				console.log("the border added");
+	//function to increase thickness and change background
+	document.body.addEventListener("click",
+		inventory.addBoarderBackground = function(event){
+			var selectChildren = event.target.parentNode.children;
+			// var selectChildren = document.body.children;
+			console.log("selectChildren",selectChildren);
+			for (var i= 0; i<selectChildren.length; i++) {
+				if (selectChildren[i].classList.contains("box")){
+					if (selectChildren[i].classList.contains("increaseThickness") 
+					|| selectChildren[i].classList.contains("changeBackground")){
+						selectChildren[i].classList.remove("increaseThickness");
+						selectChildren[i].classList.remove("changeBackground");
+						console.log("the border removerd");
+					}
+					else{
+					event.target.classList.add("increaseThickness");
+					event.target.classList.add("changeBackground");
+					console.log("the border added");
+					}
 				}
 			}
+			input.focus();
+			input.value = "";
 		}
-});
+	);
+
+	input.addEventListener("keyup",
+		inventory.WriteDescription = function(event){
+			var selectedElement =document.getElementsByClassName("increaseThickness");
+			// console.log("event",event);
+			var target = selectedElement[0].children[5]; 
+			console.log("target",target);
+			console.log("input.value",input.value);
+			target.innerHTML += input.value;
+		} 
+	);
+
 	return inventory;
 })(CarLot || {});
