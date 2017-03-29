@@ -27,27 +27,23 @@ var CarLot = (function(inventory){
 
 	//function to increase thickness and change background
 	document.body.addEventListener("click",
-		inventory.addBoarderBackground = function(event){
-			var selectChildren = event.target.parentNode.children;
-			// var selectChildren = document.body.children;
-			console.log("selectChildren",selectChildren);
-			for (var i= 0; i<selectChildren.length; i++) {
-				if (selectChildren[i].classList.contains("box")){
-					if (selectChildren[i].classList.contains("increaseThickness") 
-					|| selectChildren[i].classList.contains("changeBackground")){
-						selectChildren[i].classList.remove("increaseThickness");
-						selectChildren[i].classList.remove("changeBackground");
-						console.log("the border removerd");
-					}
-					else{
-					event.target.classList.add("increaseThickness");
-					event.target.classList.add("changeBackground");
-					console.log("the border added");
+		inventory.addBoarderBackground = function(event){	
+			if (event.target.classList.contains("col-md-3")){
+				var allChildren = document.getElementsByClassName("col-md-3");
+				//loop through all the children that have the class col-md-3 , 
+				//to remove the border and back ground if the have it and creat a border in the target element.
+				for (var i= 0; i<allChildren.length; i++){
+					if (allChildren[i].classList.contains("increaseThickness")
+					||allChildren[i].classList.contains("changeBackground")){
+							allChildren[i].classList.remove("increaseThickness");
+							allChildren[i].classList.remove("changeBackground")
 					}
 				}
-			}
+			event.target.classList.add("increaseThickness");
+			event.target.classList.add("changeBackground");
 			input.focus();
 			input.value = "";
+			}
 		}
 	);
 

@@ -6,7 +6,7 @@
       "year": "2016",
       "price": "8999",
       "color": "red",
-      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything.",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it.",
    	  "image": "./images/nissanRogue.png" 
     },
     {
@@ -15,7 +15,7 @@
       "year": "2006",
       "price": "4000",
       "color": "grey",
-      "description": "This is an 2006 Toyota Camry with only 135000 miles on it, power everything.",
+      "description": "This is an 2006 Toyota Camry with only 135000 miles on it.",
       "image": "./images/toyotaCamry.png"
     },
     {
@@ -24,7 +24,7 @@
       "year": "2008",
       "price": "8000",
       "color": "white",
-      "description": "This is an 2008 Toyota RAVA 4 with only 80000 miles on it. sun roof, power everything.",
+      "description": "This is an 2008 Toyota RAVA 4 with only 80000 miles on it.",
       "image": "./images/toyotaRava4.png"
     },
     {
@@ -33,7 +33,7 @@
       "year": "2012",
       "price": "7000",
       "color": "black",
-      "description": "This is an 2012 Honda RAVA 4 with only 45000 miles on it. low milage.",
+      "description": "This is an 2012 Honda RAVA 4 with only 45000 miles on it.",
       "image": "./images/hondaCivic.png"
     },
     {
@@ -42,7 +42,7 @@
       "year": "2006",
       "price": "1000",
       "color": "red",
-      "description": "This is an immaculate 2006 Nissan Rogue with only 3000 miles on it. Leather seats, power everything.",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 3000 miles on it.",
       "image": "./images/nissanRogue.png"
     },
     {
@@ -51,7 +51,7 @@
       "year": "2008",
       "price": "5600",
       "color": "red",
-      "description": "This is an immaculate 2008 Ford Traus with only 30 miles on it. Leather seats, power everything.",
+      "description": "This is an immaculate 2008 Ford Traus with only 30 miles on it.",
       "image": "./images/fordTraus.png"
     },
     {
@@ -60,7 +60,7 @@
       "year": "2008",
       "price": "3900",
       "color": "green",
-      "description": "This is an immaculate 2008 Toyota Corolla with only 25000 miles on it. Leather seats, power everything.",
+      "description": "This is an immaculate 2008 Toyota Corolla with only 25000 miles on it.",
       "image": "./images/toyotaCorolla.png"
     },
     {
@@ -69,7 +69,7 @@
       "year": "2008",
       "price": "7999",
       "color": "red",
-      "description": "This is an immaculate 2008 Nissan Lancer with only 25000 miles on it. Leather seats, power everything.",
+      "description": "This is an immaculate 2008 Nissan Lancer with only 25000 miles on it.",
       "image": "./images/mitsubishiLancer.png"
     }
   ]
