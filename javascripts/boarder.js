@@ -9,7 +9,7 @@ var selectChildren = document.body.children;
 
 var CarLot = (function(inventory){
 
-	//function to increase thickness and change background
+	// increase thickness and change background
 	inventory.resetBoarderBackground = function(){
 		if (document.body.classList.contains("box")){
 			var selectChildren = document.body.children;
@@ -25,7 +25,7 @@ var CarLot = (function(inventory){
 		}
 	};
 
-	//function to increase thickness and change background
+	// increase thickness and change background
 	document.body.addEventListener("click",
 		inventory.addBoarderBackground = function(event){	
 			if (event.target.classList.contains("col-md-3")){
@@ -47,16 +47,19 @@ var CarLot = (function(inventory){
 		}
 	);
 
+	// write to the description property
 	input.addEventListener("keyup",
 		inventory.WriteDescription = function(event){
-			var selectedElement =document.getElementsByClassName("increaseThickness");
-			// console.log("event",event);
-			var target = selectedElement[0].children[5]; 
-			console.log("target",target);
-			console.log("input.value",input.value);
-			target.innerHTML += input.value;
-		} 
-	);
+			var selectedElement =document.getElementsByClassName("col-md-3");
+			for (var i=0; i<selectedElement.length ;i++){
+				if (selectedElement[i].classList.contains("increaseThickness")){
+					var description = selectedElement[i].children[0].children[5];
+					description.innerText = input.value;
+				}
+			}	
+  		}
+  	); 
+
 
 	return inventory;
 })(CarLot || {});

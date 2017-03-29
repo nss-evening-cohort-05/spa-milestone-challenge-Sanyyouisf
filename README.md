@@ -25,7 +25,7 @@
 - Jason file.
 - IIFE functions.
 
-![Blog Screengrab]()
+![Blog Screengrab](https://raw.githubusercontent.com/nss-evening-cohort-05/spa-milestone-challenge-Sanyyouisf/master/images/image.png)
 
 ## Technical Requirements
 
