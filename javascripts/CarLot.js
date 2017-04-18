@@ -18,8 +18,6 @@ var CarLot = (function () {
 
   		executeThisCodeAfterFileLoaded : function(){
     		var data = JSON.parse(this.responseText);
-    		console.log("my Data is : ", data);
-    		// CarLot.resetBoarderBackground();
     		CarLot.makeDom(data);
 		},	
 	    

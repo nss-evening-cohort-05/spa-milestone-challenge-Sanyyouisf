@@ -1,11 +1,8 @@
-//The final IIFE should augment the object with two more functions. 
-//One function resets the border thickness and background color for each car element back to the original values. 
-//The other function changes the thickness of the border of a car element, and changes its background color. The function must accept two arguments.
-//   1. A car DOM element that was clicked on.
-//  1. A color name of your choice
+//variables
 
 var input = document.getElementById("input");
 var selectChildren = document.body.children;
+var allChildren = document.getElementsByClassName("col-md-3");
 
 var CarLot = (function(inventory){
 
@@ -25,27 +22,31 @@ var CarLot = (function(inventory){
 		}
 	};
 
-	// increase thickness and change background
-	document.body.addEventListener("click",
-		inventory.addBoarderBackground = function(event){	
+//event listener for clicking on the card 
+	document.body.addEventListener("click",function(event) {				
+		for (var i= 0; i<allChildren.length; i++){
+			if (allChildren[i].classList.contains("increaseThickness")
+			||allChildren[i].classList.contains("changeBackground")){
+				allChildren[i].classList.remove("increaseThickness");
+				allChildren[i].classList.remove("changeBackground")
+			}
+			if (event.target.classList.contains("grandchild")){
+				event.target.parentNode.parentNode.classList.add("increaseThickness");
+				event.target.parentNode.parentNode.classList.add("changeBackground");
+			}
+			if (event.target.classList.contains("child")){
+				event.target.parentNode.classList.add("increaseThickness");
+				event.target.parentNode.classList.add("changeBackground");
+			}
 			if (event.target.classList.contains("col-md-3")){
-				var allChildren = document.getElementsByClassName("col-md-3");
-				//loop through all the children that have the class col-md-3 , 
-				//to remove the border and back ground if the have it and creat a border in the target element.
-				for (var i= 0; i<allChildren.length; i++){
-					if (allChildren[i].classList.contains("increaseThickness")
-					||allChildren[i].classList.contains("changeBackground")){
-							allChildren[i].classList.remove("increaseThickness");
-							allChildren[i].classList.remove("changeBackground")
-					}
-				}
-			event.target.classList.add("increaseThickness");
-			event.target.classList.add("changeBackground");
-			input.focus();
-			input.value = "";
+				event.target.classList.add("increaseThickness");
+				event.target.classList.add("changeBackground");
 			}
 		}
-	);
+		input.focus();
+		input.value = "";
+	});
+
 
 	// write to the description property
 	input.addEventListener("keyup",
@@ -56,7 +57,17 @@ var CarLot = (function(inventory){
 					var description = selectedElement[i].children[0].children[5];
 					description.innerText = input.value;
 				}
-			}	
+				 	selectedElement[i].classList.remove("changeBackground");
+			}
+			//when you click enter
+			for (var i=0; i<selectedElement.length ;i++){
+				if ( event.keyCode === 13 ){
+					input.value = "";
+					input.blur();
+					selectedElement[i].classList.remove("increaseThickness");
+					selectedElement[i].classList.remove("changeBackground");
+				}
+			}
   		}
   	); 
 
