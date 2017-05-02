@@ -57,7 +57,7 @@ var CarLot = (function(inventory){
 					var description = selectedElement[i].children[0].children[5];
 					description.innerText = input.value;
 				}
-				 	selectedElement[i].classList.remove("changeBackground");
+				 	// selectedElement[i].classList.remove("changeBackground");
 			}
 			//when you click enter
 			for (var i=0; i<selectedElement.length ;i++){
